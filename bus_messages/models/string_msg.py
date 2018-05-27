@@ -1,21 +1,21 @@
 from django.db import models
 
 class StringMsg(models.Model):
-    protocol_id = models.CharField()
-    message_type = models.CharField()
+    protocol_id = models.CharField(max_length=3)
+    message_type = models.CharField(max_length=1)
     message_length = models.IntegerField()
-    message_id = models.CharField()
-    string_id = models.CharField()
-    state = models.CharField()
+    message_id = models.CharField(max_length=255)
+    string_id = models.CharField(max_length=3)
+    state = models.CharField(max_length=1)
     state_of_charge = models.IntegerField()
     temperature = models.IntegerField()
     voltage = models.IntegerField()
     amperes = models.IntegerField()
     alarm_and_status = models.IntegerField()
     bms_assembly_revision = models.IntegerField()
-    bms_serial_no = models.CharField()
-    bms_master_software_version = models.CharField()
-    bms_slave_software_version = models.CharField()
+    bms_serial_no = models.CharField(max_length=16)
+    bms_master_software_version = models.CharField(max_length=4)
+    bms_slave_software_version = models.CharField(max_length=4)
     watt_hours_to_discharge = models.IntegerField()
     watt_hours_to_charge = models.IntegerField()
     min_cell_millivolts = models.IntegerField()
@@ -40,8 +40,8 @@ class StringMsg(models.Model):
     string_contactor_on = models.BooleanField(default=False)
 
     # Timestamps
-    created_at = models.DateTime(auto_now_add=True)
-    updated_at = models.DateTime(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     # SAMPLE_DATA = {
     #     'protocol_id': '001',
