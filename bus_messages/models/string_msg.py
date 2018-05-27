@@ -11,7 +11,7 @@ class StringMsg(models.Model):
     temperature = models.IntegerField()
     voltage = models.IntegerField()
     amperes = models.IntegerField()
-    alarm_and_status = models.IntegerField()
+    alarm_and_status = models.BigIntegerField()
     bms_assembly_revision = models.IntegerField()
     bms_serial_no = models.CharField(max_length=16)
     bms_master_software_version = models.CharField(max_length=4)

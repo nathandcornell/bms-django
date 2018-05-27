@@ -17,7 +17,7 @@ class ModuleMsg(models.Model):
     avg_cell_voltage = models.IntegerField()
     max_cell_voltage = models.IntegerField()
     amperes = models.IntegerField()
-    alarm_and_status = models.IntegerField()
+    alarm_and_status = models.BigIntegerField()
     assembly_revision = models.CharField(max_length=4)
     serial_no = models.CharField(max_length=16)
     master_software_version = models.CharField(max_length=4)
