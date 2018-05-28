@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "95809adb0635b7e5614dbd301116021b9a29af73b5c325bf1d1367f2b816f477"
+            "sha256": "cd1484961e28a4fad84d3bd2394e73125dcd7267ddf1036d7adcbcdd51a4c278"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -24,9 +24,19 @@
             "index": "pypi",
             "version": "==2.0.5"
         },
+        "django-extensions": {
+            "hashes": [
+                "sha256:3be3debf53c77ca795bdf713726c923aa3c3f895e1a42e2e31a68c1a562346a4",
+                "sha256:94bfac99eb262c5ac27e53eda96925e2e53fe0b331af7dde37012d07639a649c"
+            ],
+            "index": "pypi",
+            "version": "==2.0.7"
+        },
         "psycopg2-binary": {
             "hashes": [
+                "sha256:003975ca248e4906f2edf8f8b156ed92f519ce8be406b7ca994a5d873919268b",
                 "sha256:02eb674e3d5810e19b4d5d00720b17130e182da1ba259dda608aaf33d787347d",
+                "sha256:06cf144c7ee5777ed5541964c06aa44fc80d0f7011da1a0196731420a6e255e6",
                 "sha256:3a14baeabcebd4662f12f4bff03e0574a2369a2e41baf829e6fb4a24c95cf88b",
                 "sha256:436a503eda41f6adb08f292f40a3784fce0a5f351b6ae7b19a911904db53af93",
                 "sha256:465ff1d427ed42c31e456dbbd9edab3552be18a0edaef7450c5b3e6fee745052",
@@ -57,12 +67,27 @@
             "index": "pypi",
             "version": "==2.7.4"
         },
+        "pyserial": {
+            "hashes": [
+                "sha256:6e2d401fdee0eab996cf734e67773a0143b932772ca8b42451440cfed942c627",
+                "sha256:e0770fadba80c31013896c7e6ef703f72e7834965954a78e71a3049488d4d7d8"
+            ],
+            "index": "pypi",
+            "version": "==3.4"
+        },
         "pytz": {
             "hashes": [
                 "sha256:65ae0c8101309c45772196b21b74c46b2e5d11b6275c45d251b150d5da334555",
                 "sha256:c06425302f2cf668f1bba7a0a03f3c1d34d4ebeef2c72003da308b3947c7f749"
             ],
             "version": "==2018.4"
+        },
+        "six": {
+            "hashes": [
+                "sha256:70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9",
+                "sha256:832dc0e10feb1aa2c68dcc57dbb658f1c7e65b9b61af69048abc87a2db00a0eb"
+            ],
+            "version": "==1.11.0"
         }
     },
     "develop": {}
