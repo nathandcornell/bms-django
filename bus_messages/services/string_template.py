@@ -67,4 +67,4 @@ class StringTemplate(MessageTemplate):
     }
 
     def createMessage(self):
-        StringMsg.objects.create(**self.__dict__)
+        return None if (self.amperes == 0) else StringMsg.objects.create(**self.__dict__)

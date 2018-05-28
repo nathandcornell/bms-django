@@ -58,23 +58,23 @@ class ModuleTemplate(MessageTemplate):
         'message_id': '419',
         'string_id': '00',
         'module_id': '00',
-        'module_state': 'R',
-        'module_state_of_change': '051',
+        'state': 'R',
+        'state_of_change': '051',
         'min_cell_temperature': '022',
         'avg_cell_temperature': '023',
         'max_cell_temperature': '027',
-        'module_voltage': '025709',
+        'voltage': '025709',
         'min_cell_voltage': '003653',
         'avg_cell_voltage': '003672',
         'max_cell_voltage': '003710',
-        'module_amperes': '00000',
+        'amperes': '00000',
         'alarm_and_status': '80000000',
-        'module_assembly_revision': '000',
-        'module_serial_no': '1311250000800',
+        'assembly_revision': '000',
+        'serial_no': '1311250000800',
         'master_software_version': '0501',
         'slave_software_version': '0496',
         'max_front_power_conn_temp': '029'
     }
 
     def createMessage(self):
-        ModuleMsg.objects.create(**self.__dict__)
+        return None if (self.serial_no == '') else ModuleMsg.objects.create(**self.__dict__)
