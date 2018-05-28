@@ -1,6 +1,8 @@
 import csv
+from io import BytesIO
 from .string_template import StringTemplate
 from .module_template import ModuleTemplate
+from .unknown_message_type_error import UnknownMessageTypeError
 
 class MessageParser:
     STRING_TYPE = 'S'
@@ -10,7 +12,7 @@ class MessageParser:
     reader_memo = None
 
     def __init__(self, message_string):
-        self.message_string = message_string
+        self.message_string = BytesIO(message_string).read().decode('ascii')
 
     def reader(self):
         if self.reader_memo is None:
@@ -36,3 +38,5 @@ class MessageParser:
             return StringTemplate(self.message_dict())
         elif self.message_type() == self.MODULE_TYPE:
             return ModuleTemplate(self.message_dict())
+        else:
+            raise UnknownMessageTypeError("Unknown message type: " + self.message_type)
