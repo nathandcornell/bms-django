@@ -40,7 +40,7 @@ class StringMsg(models.Model):
     string_contactor_on = models.BooleanField(default=False)
 
     # Timestamps
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(db_index=True, auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     # SAMPLE_DATA = {
