@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import ModuleMsg
-from .models import StringMsg
+from .models import ModuleMsg, StringMsg
 
 # Register your models here.
 admin.site.register(ModuleMsg)
