@@ -76,5 +76,10 @@ class ModuleMsg(models.Model):
         'max_front_power_conn_temp': '029'
     }
 
-    def serial_numbers():
-        self.objects.values('serial_no').distinct()
+    @classmethod
+    def serial_numbers(cls):
+        cls.objects.values('serial_no').distinct()
+
+    @classmethod
+    def latest(cls, serial):
+        cls.objects.filter(serial_no=serial).latest('created_at')

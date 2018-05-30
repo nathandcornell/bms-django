@@ -43,25 +43,29 @@ class StringMsg(models.Model):
     created_at = models.DateTimeField(db_index=True, auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    # SAMPLE_DATA = {
-    #     'protocol_id': '001',
-    #     'message_type': 'S',
-    #     'message_length': '122',
-    #     'message_id': '078',
-    #     'string_id': '00',
-    #     'state': 'I',
-    #     'state_of_charge': '053',
-    #     'temperature': '020',
-    #     'voltage': '025840',
-    #     'amperes': '00003',
-    #     'alarm_and_status': '80000000', # Temperature Fault only
-    #     'bms_assembly_revision': '002',
-    #     'bms_serial_no': '1607150018800',
-    #     'bms_master_software_version': '887',
-    #     'bms_slave_software_version': '842',
-    #     'watt_hours_to_discharge': '000509',
-    #     'watt_hours_to_charge': '000451',
-    #     'min_cell_millivolts': '003664',
-    #     'max_cell_millivolts': '003744',
-    #     'front_power_temperature': '020'
-    # }
+    SAMPLE_DATA = {
+        'protocol_id': '001',
+        'message_type': 'S',
+        'message_length': '122',
+        'message_id': '078',
+        'string_id': '00',
+        'state': 'I',
+        'state_of_charge': '053',
+        'temperature': '020',
+        'voltage': '025840',
+        'amperes': '00003',
+        'alarm_and_status': '80000000', # Temperature Fault only
+        'bms_assembly_revision': '002',
+        'bms_serial_no': '1607150018800',
+        'bms_master_software_version': '887',
+        'bms_slave_software_version': '842',
+        'watt_hours_to_discharge': '000509',
+        'watt_hours_to_charge': '000451',
+        'min_cell_millivolts': '003664',
+        'max_cell_millivolts': '003744',
+        'front_power_temperature': '020'
+    }
+
+    @classmethod
+    def latest(cls):
+        cls.objects.latest('created_at')
