@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 class StringMsg(models.Model):
     protocol_id = models.CharField(max_length=3)
@@ -69,3 +70,14 @@ class StringMsg(models.Model):
     @classmethod
     def latest(cls):
         cls.objects.latest('created_at')
+
+    @classmethod
+    def last_24_hours(cls, string_id):
+        cutoff = datetime.datetime.now() - datetime.timedelta(hours=24)
+        return cls.objects.filter(string_id=string_id).filter(created_at__gte=cutoff)
+
+    def url(self):
+        "/string/" + self.string_id
+
+    def to_dict(self):
+        return {**self.__dict__, **{'url': self.url()}}

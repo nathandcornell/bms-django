@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 class ModuleMsg(models.Model):
     protocol_id = models.CharField(max_length=3)
@@ -76,10 +77,25 @@ class ModuleMsg(models.Model):
         'max_front_power_conn_temp': '029'
     }
 
-    @classmethod
-    def serial_numbers(cls):
-        cls.objects.values('serial_no').distinct()
+    def url(self):
+        return "/module/" + self.serial_no
+
+    def to_dict(self):
+        return {**self.__dict__, **{'url': self.url()}}
 
     @classmethod
-    def latest(cls, serial):
-        cls.objects.filter(serial_no=serial).latest('created_at')
+    def serial_numbers(cls):
+        return list(map((lambda serial: serial['serial_no']), cls.objects.values('serial_no').distinct()))
+
+    @classmethod
+    def latest_for_serial(cls, serial):
+        return cls.objects.filter(serial_no=serial).latest('created_at')
+
+    @classmethod
+    def last_24_hours(cls, serial):
+        cutoff = datetime.datetime.now() - datetime.timedelta(hours=24)
+        return cls.objects.filter(serial_no=serial).filter(created_at__gte=cutoff)
+
+    @classmethod
+    def latest_messages(cls):
+        return list(map((lambda serial: cls.latest(serial).to_dict()), cls.serial_numbers()))
