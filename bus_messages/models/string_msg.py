@@ -80,4 +80,6 @@ class StringMsg(models.Model):
         "/string/" + self.string_id
 
     def to_dict(self):
-        return {**self.__dict__, **{'url': self.url()}}
+        attributes = self.__dict__
+        attributes.pop('_state')
+        return {**attributes, **{'url': self.url()}}

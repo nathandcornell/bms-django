@@ -81,7 +81,9 @@ class ModuleMsg(models.Model):
         return "/module/" + self.serial_no
 
     def to_dict(self):
-        return {**self.__dict__, **{'url': self.url()}}
+        attributes = self.__dict__
+        attributes.pop('_state')
+        return {**attributes, **{'url': self.url()}}
 
     @classmethod
     def serial_numbers(cls):
@@ -98,4 +100,4 @@ class ModuleMsg(models.Model):
 
     @classmethod
     def latest_messages(cls):
-        return list(map((lambda serial: cls.latest(serial).to_dict()), cls.serial_numbers()))
+        return list(map((lambda serial: cls.latest_for_serial(serial).to_dict()), cls.serial_numbers()))
