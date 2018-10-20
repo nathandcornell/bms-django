@@ -8,7 +8,7 @@ from .models.string_msg import StringMsg
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Hey y'all! You're at the messages index!")
+    return ""
 
 def module(request, serial_no):
     return HttpResponse("Module Test")
