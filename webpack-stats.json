@@ -1,0 +1,1 @@
+{"status":"done","error":"ModuleNotFoundError","message":"Module not found: Error: Can't resolve 'components/Container' in '/Users/nate/workspace/python/bms-django/bus_messages/static/js'","chunks":{"main":[{"name":"main-6b21944864f77d4675a2.js","path":"/Users/nate/workspace/python/bms-django/bus_messages/static/bundles/main-6b21944864f77d4675a2.js"}]}}

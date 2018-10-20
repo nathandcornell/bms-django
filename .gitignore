@@ -102,3 +102,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# NPM/Yarn:
+node_modules/
+yarn-error.log
+bus_messages/static/bundles/

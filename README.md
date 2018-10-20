@@ -8,6 +8,7 @@ Parsing and display service for a battery module system
 4. Create a PostgreSQL database, user, and password for the application
 5. Copy .env.example to .env and enter the database details
 6. Run `pipenv run python manage.py migrate` to set up the database
+7. Run `npm install && ./node_modules/.bin/webpack --config webpack.config.js` to install and compile JavaScript assets
 
 ## Start the log parser service
 Run `start_parser.sh`
