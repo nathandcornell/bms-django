@@ -4,10 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "*"
+django = ">=2.0.8"
 "psycopg2-binary" = "*"
 django-extensions = "*"
 pyserial = "*"
+django-webpack-loader = "*"
 
 [dev-packages]
 
