@@ -14,8 +14,8 @@ export default class GuageSet extends React.Component {
         <Grid container item xs={12} spacing={16}>
           <Grid item xs={4}>
             <ReactSpeedometer
-              width={120}
-              height={90}
+              width={140}
+              height={100}
               ringWidth={20}
               minValue={0}
               maxValue={50}
@@ -27,8 +27,8 @@ export default class GuageSet extends React.Component {
           </Grid>
           <Grid item xs={4}>
             <ReactSpeedometer
-              width={120}
-              height={90}
+              width={140}
+              height={100}
               ringWidth={20}
               minValue={1.8}
               maxValue={6.0}
@@ -38,8 +38,8 @@ export default class GuageSet extends React.Component {
           </Grid>
           <Grid item xs={4}>
             <ReactSpeedometer
-              width={120}
-              height={90}
+              width={140}
+              height={100}
               ringWidth={20}
               maxValue={10.0}
               value={data.amperes}

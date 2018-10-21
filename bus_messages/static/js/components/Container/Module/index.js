@@ -6,6 +6,8 @@ import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 
 import GaugeSet from './GaugeSet'
+import BalancingSet from './BalancingSet'
+// import FaultSet from './FaultSet'
 
 export default class Module extends React.Component {
   render () {
@@ -18,6 +20,7 @@ export default class Module extends React.Component {
             {data.serial_no.substr(data.serial_no.length - 5)}
           </Typography>
           <GaugeSet classes={classes} data={data} />
+          <BalancingSet classes={classes} data={data} />
         </Paper>
       </Grid>
     )
