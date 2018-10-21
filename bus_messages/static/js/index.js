@@ -6,5 +6,5 @@ const module_container = <Container />
 
 ReactDOM.render(
   module_container,
-  document.getElementById('react')
+  document.getElementById('container')
 );
