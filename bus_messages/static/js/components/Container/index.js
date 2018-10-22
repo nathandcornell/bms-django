@@ -33,22 +33,23 @@ const styles = theme => ({
 })
 
 class Container extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = { modules: [] }
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8000/api/modules')
-    .then(response => {
-      this.setState({ modules: response.data });
-    })
-    .catch(function (error) {
-      console.log(error);
-    })
+    this.pollster = setInterval(
+      () => this.fetchModules(),
+      1000
+    )
   }
 
-  render () {
+  componentWillUnmount() {
+    clearInterval(this.pollster);
+  }
+
+  render() {
     const { classes, theme } = this.props
 
     return (
@@ -69,6 +70,16 @@ class Container extends React.Component {
         </Grid>
       </Grid>
     )
+  }
+
+  fetchModules() {
+    axios.get('http://localhost:8000/api/modules')
+    .then(response => {
+      this.setState({ modules: response.data });
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
   }
 }
 
