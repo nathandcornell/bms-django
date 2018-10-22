@@ -1,6 +1,10 @@
 # BMS
 Parsing and display service for a battery module system
 
+![screenshot-1]("https://user-images.githubusercontent.com/2002882/47274370-6f3eea80-d559-11e8-8829-38395631c17e.png")
+![screenshot-2]("https://user-images.githubusercontent.com/2002882/47274371-6fd78100-d559-11e8-9606-0524e1225506.png")
+![screenshot-3]("https://user-images.githubusercontent.com/2002882/47274374-70701780-d559-11e8-9a13-b627d4c46f0a.png")
+
 ## Getting started
 1. Clone this repo
 2. Install Python 3, PostgreSQL and pipenv
