@@ -1,9 +1,9 @@
 # BMS
 Parsing and display service for a battery module system
 
-![screenshot-1]("https://user-images.githubusercontent.com/2002882/47274370-6f3eea80-d559-11e8-8829-38395631c17e.png")
-![screenshot-2]("https://user-images.githubusercontent.com/2002882/47274371-6fd78100-d559-11e8-9606-0524e1225506.png")
-![screenshot-3]("https://user-images.githubusercontent.com/2002882/47274374-70701780-d559-11e8-9a13-b627d4c46f0a.png")
+<img width="556" alt="screen shot 2018-10-21 at 5 36 00 pm" src="https://user-images.githubusercontent.com/2002882/47274370-6f3eea80-d559-11e8-8829-38395631c17e.png">
+<img width="1280" alt="screen shot 2018-10-21 at 5 40 21 pm" src="https://user-images.githubusercontent.com/2002882/47274371-6fd78100-d559-11e8-9606-0524e1225506.png">
+<img width="1223" alt="screen shot 2018-10-21 at 5 40 33 pm" src="https://user-images.githubusercontent.com/2002882/47274374-70701780-d559-11e8-9a13-b627d4c46f0a.png">
 
 ## Getting started
 1. Clone this repo
