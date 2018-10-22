@@ -12,10 +12,10 @@ export default class GuageSet extends React.Component {
     const { classes, data } = this.props
     const cells = [
       data.cell_0_balancing,
-      true,
+      data.cell_1_balancing,
       data.cell_2_balancing,
       data.cell_3_balancing,
-      true,
+      data.cell_4_balancing,
       data.cell_5_balancing,
       data.cell_6_balancing,
     ]

@@ -22,6 +22,7 @@ const styles = theme => ({
   },
   module: {
     padding: 16,
+    maxWidth: 500,
   },
   moduleSection: {
     padding: 8,

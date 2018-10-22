@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography'
 
 import GaugeSet from './GaugeSet'
 import BalancingSet from './BalancingSet'
-// import FaultSet from './FaultSet'
+import FaultSet from './FaultSet'
 
 export default class Module extends React.Component {
   render () {
@@ -21,6 +21,7 @@ export default class Module extends React.Component {
           </Typography>
           <GaugeSet classes={classes} data={data} />
           <BalancingSet classes={classes} data={data} />
+          <FaultSet classes={classes} data={data} />
         </Paper>
       </Grid>
     )
