@@ -41,8 +41,10 @@ export default class GuageSet extends React.Component {
               width={140}
               height={100}
               ringWidth={20}
-              maxValue={10.0}
-              value={data.amperes}
+              maxValue={15.0}
+              startColor="rgb(106, 215, 45)"
+              endColor="rgb(255, 0, 0)"
+              value={data.amperes / 10}
               currentValueText="Amperes: ${value}"
             />
           </Grid>
