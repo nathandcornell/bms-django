@@ -1,2 +1,6 @@
 #!/bin/bash
-pipenv run python manage.py runserver
+SCRIPT_PATH="$(dirname "$BASH_SOURCE")"
+PIPENV=$( which pipenv )
+
+cd "$SCRIPT_PATH"
+"$PIPENV" run python manage.py runserver
