@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import moment from 'moment'
+import moment from "moment-timezone"
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
@@ -43,7 +43,7 @@ export default class Module extends React.Component {
             </Grid>
             <Grid item xs={4}>
               <Typography component="h6" variant="h6" gutterBottom>
-                {moment(data.created_at).format("lll z")}
+                {moment(data.created_at).tz(moment.tz.guess()).format("lll z")}
               </Typography>
             </Grid>
           </Grid>
