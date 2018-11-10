@@ -1,0 +1,13 @@
+[Unit]
+Description=BMS serial message parser
+After=multi-user.target
+
+[Service]
+User=pi
+Restart=always
+Type=simple
+WorkingDirectory=/home/pi/bms/
+ExecStart=/home/pi/bms/start_parser.sh
+
+[Install]
+WantedBy=multi-user.target
